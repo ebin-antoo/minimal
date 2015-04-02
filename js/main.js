@@ -50,3 +50,31 @@ function backgroundResize(){
 $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
 backgroundResize();
+
+//typed
+$(function(){
+      $(".type").typed({
+        strings: ["Develop", "Create", "Design"],
+        typeSpeed: 40,
+        backSpeed: 50,
+        backDelay: 700,
+      });
+  });
+
+$(function(){
+	$('#st-container').hasClass('st-container st-effect-8',
+		$('button.cmn-toggle-switch').removeClass('active')
+	);
+});
+
+$('div.st-pusher').click(function(){
+	$('button.cmn-toggle-switch').removeClass('active');
+});
+
+$(document).scroll(function() {
+  //detect when user scroll to top and set position to relative else sets position to fixed
+  $("#st-trigger-effects").css({
+    "top": "0",
+    "position": $(this).scrollTop() > 140 ? "fixed" : "relative"
+  });
+});
