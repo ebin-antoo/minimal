@@ -6,15 +6,28 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Minimal Development</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         
+        <!-- head styles -->
+        <link rel="stylesheet" href="./css/head_styles.css">
+
         <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/minimal.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.19.0/css/uikit.min.css">
+
+        <link rel="stylesheet" href="./js/lib/vegas/vegas.min.css">
+
+        
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.0.4/css/jquery.mmenu.all.css">
 
         <!-- Jquery - Angular - Bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -25,16 +38,75 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.19.0/js/uikit.min.js"></script>
+
+        <!-- modernizr -->
+        <script src="js/lib/modernizr.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.0.4/js/jquery.mmenu.min.all.js"></script>
+
+    
+        <script type="text/javascript">
+            $(function() {
+                $('nav#menu').mmenu({
+                    extensions  : [ 'effect-slide', 'pageshadow' ],
+                    header      : true,
+                    searchfield : true,
+                    counters    : true,
+
+                });
+            });
+        </script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        
+        <a id="hamburger" class="mm-fixed mm-slideout" href="#menu"><span></span></a>
 
+        <div class="container-fluid body" id="header">
+
+        <div class="row">
+            <div class="col-md-3-offset">
+                dfdf
+            </div>
+        </div>
+
+
+        <!-- sidebar navigation -->    
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About us</a>
+                    <ul>
+                        <li><a href="#about/history">History</a></li>
+                        <li><a href="#about/team">The team</a>
+                            <ul>
+                                <li><a href="#about/team/management">Management</a></li>
+                                <li><a href="#about/team/sales">Sales</a></li>
+                                <li><a href="#about/team/development">Development</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about/address">Our address</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        </div><!-- /EO container -->
+
+
+        <!-- Script -->
+
+        <!-- Bg -->
+        <script src="./js/lib/vegas/vegas.min.js"></script>
         
+        <!-- Core -->
+        <script src="./js/core/minimal.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

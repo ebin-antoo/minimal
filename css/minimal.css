@@ -1,0 +1,111 @@
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%\9 !important;
+}
+
+/* background setup */
+.background {
+    background-repeat:no-repeat;
+    /* custom background-position */
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%\9 !important;
+}
+
+
+.fullscreen {
+    width:100%;
+    min-height:100%;
+}
+
+nav:not(.mm-menu)
+{
+	display: none;
+}
+
+/*
+	LAYOUT
+*/
+#hamburger
+{
+	box-sizing: border-box;
+	display: block;
+	width: 70px;
+	height: 45px;
+	position: fixed;
+	top: 10px;
+	left: 0;
+	z-index: 4;
+}
+#hamburger:before,
+#hamburger:after,
+#hamburger span
+{
+	background: #fff;
+	content: '';
+	display: block;
+	width: 40px;
+	height: 5px;
+	position: absolute;
+	left: 20px;
+}
+#hamburger:before
+{
+	top: 10px;
+}
+#hamburger span
+{
+	top: 20px;
+}
+#hamburger:after
+{
+	top: 30px;
+}
+
+/* Hamburger animation */
+#hamburger:before,
+#hamburger:after,
+#hamburger span
+{
+	-webkit-transition: none 0.5s ease 0.5s;
+	transition: none 0.5s ease 0.5s;
+
+	-webkit-transition-property: transform, top, bottom, left, opacity;
+	transition-property: transform, top, bottom, left, opacity;
+
+	background-color: black;
+}
+html.mm-opening #hamburger:before,
+html.mm-opening #hamburger:after
+{
+	top: 20px;	
+}
+html.mm-opening #hamburger span
+{
+	left: -50px;
+	opacity: 0;
+}
+html.mm-opening #hamburger:before
+{
+	transform: rotate( 45deg );
+}
+html.mm-opening #hamburger:after
+{
+	transform: rotate( -45deg );
+}
+
+
+/* really small screens */
+@media all and (max-width: 760px)
+{
+	#hamburger
+	{
+		opacity: 0.9;
+		width: 100%;
+		top: 0;
+	}
+}
